@@ -1,0 +1,48 @@
+.cus-sider.ant-layout-sider {
+    padding: 0 24px;
+    .logo {
+        padding: 16px 16px;
+    }
+    .brand-title {
+        font-size: 20px;
+        color: #000;
+        font-weight: bold;
+    }
+    .brand-img {
+        display: block;
+    }
+    .ant-menu {
+        background: transparent;
+    }
+    .ant-menu-inline,
+    .ant-menu-vertical,
+    .ant-menu-vertical-left {
+        border-right: 0;
+    }
+    .ant-menu-vertical .ant-menu-item::after, .ant-menu-vertical-left .ant-menu-item::after, .ant-menu-vertical-right .ant-menu-item::after, .ant-menu-inline .ant-menu-item::after {
+        border-right: 0;
+    }
+    .ant-menu-item-selected {
+        color: #fff;
+    }
+    .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+        background: @primary-color;
+    }
+    .ant-menu-item {
+        border-radius: 4px;
+    }
+    .ant-menu-vertical .ant-menu-item, .ant-menu-vertical-left .ant-menu-item, .ant-menu-vertical-right .ant-menu-item, .ant-menu-inline .ant-menu-item, .ant-menu-vertical .ant-menu-submenu-title, .ant-menu-vertical-left .ant-menu-submenu-title, .ant-menu-vertical-right .ant-menu-submenu-title, .ant-menu-inline .ant-menu-submenu-title {
+        height: 30px;
+        line-height: 30px;
+    }
+    .ant-menu-vertical .ant-menu-item:not(:last-child), .ant-menu-vertical-left .ant-menu-item:not(:last-child), .ant-menu-vertical-right .ant-menu-item:not(:last-child), .ant-menu-inline .ant-menu-item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    .ant-menu-item-group-title {
+        margin-top: 25px;
+    }
+    .ant-badge {
+        margin-left: 5px;
+        margin-top: -3px;
+    }
+}

@@ -1,0 +1,68 @@
+.global-header.ant-layout-header {
+    height: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    background: transparent;
+    line-height: normal;
+    .header-left {
+        .vcc-search {
+            width: 140px;
+            margin-left: 16px;
+            .ant-input {
+                background: #E3E3E3;
+                border-radius: 35px;
+                border-width: 0;
+                &:hover, &:focus {
+                    border-width: 1px;
+                }
+            }
+        }
+    }
+    .header-right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .user-info {
+        cursor: pointer;
+    }
+    .user-text {
+        padding: 0 8px;
+        font-size: 12px;
+    }
+    
+}
+.cus-header-menu {
+    font-size: 12px;
+    .ant-dropdown-menu-item,
+    .ant-dropdown-menu-submenu-title{
+        padding: 5px 16px;
+        margin: 3px 0;
+        font-size: 12px;
+        .anticon {
+            font-size: 14px;
+        }
+    }
+    .cus-menu-item {
+        display: inline-block;
+        text-align: center;
+        padding: 5px 20px;
+        .anticon {
+            font-size: 32px;
+            margin-right: 0 !important;
+            margin-top: 8px;
+        }
+        &:first-child {
+            margin-left: 10px;
+        }
+        &:not(:first-child) {
+            margin-right: 10px;
+        }
+        div {
+            line-height: 32px;
+        }
+    }
+}
