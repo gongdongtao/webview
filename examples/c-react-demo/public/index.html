@@ -27,7 +27,7 @@
     <script>
       function resultHandle(result) {
         var event = document.createEvent('CustomEvent');
-        event.initCustomEvent('invoke-message', true, true, {some: '一些有用的信息'});
+        event.initCustomEvent('invoke-message', true, true, result);
         window.dispatchEvent(event);
       }
       // 兼容ie数组没有findIndex方法
