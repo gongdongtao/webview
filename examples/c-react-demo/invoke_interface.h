@@ -10,5 +10,6 @@ struct InvokeData {
 extern void external_invoke_interface(struct webview *w, const char *arg);
 extern void real_invoke_interface(struct InvokeData* data);
 
-extern void invoke_hello(struct webview *w, const char *arg);
+void invoke_hello(struct webview *w, const char* callbackName, const char *args);
+
 #endif

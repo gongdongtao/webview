@@ -1,6 +1,8 @@
 #include "utils.h"
 #ifdef WIN32
 #include <Windows.h>
+#else
+#include <stdint.h>
 #endif // 
 
 

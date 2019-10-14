@@ -4,7 +4,7 @@
 /* Jumptable for the ui invoke handlers */
 static const struct {
 	const char *command;
-	int(*invoke_handlers)(struct webview *w,const char* callbackName, const char *args);
+	void (*invoke_handlers)(struct webview *w,const char* callbackName, const char *args);
 } commands[] = {
 	{"hello",invoke_hello}
 };
