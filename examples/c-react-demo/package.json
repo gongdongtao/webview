@@ -1,6 +1,7 @@
 {
   "name": "vlan-client",
   "version": "0.1.0",
+  "homepage":".",
   "private": true,
   "dependencies": {
     "@babel/core": "7.2.2",
@@ -145,6 +146,6 @@
   "devDependencies": {
     "antd-theme-webpack-plugin": "^1.3.0",
     "babel-plugin-import": "^1.11.0",
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.12.0"
   }
 }

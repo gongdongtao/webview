@@ -11,3 +11,18 @@ add_executable(c_react_demo WIN32 MACOSX_BUNDLE main.c  ${SRC_FILES})
 
 find_package(Threads REQUIRED)
 target_link_libraries(c_react_demo PUBLIC webview ${CMAKE_THREAD_LIBS_INIT})
+
+if(APPLE)
+add_custom_command(TARGET c_react_demo POST_BUILD
+	COMMAND echo "mkdir $<TARGET_FILE_DIR:c_react_demo>/ui"
+	COMMAND rm -Rf "$<TARGET_FILE_DIR:c_react_demo>/ui"	
+	COMMAND mkdir "$<TARGET_FILE_DIR:c_react_demo>/ui"
+	COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/build $<TARGET_FILE_DIR:c_react_demo>/ui
+)
+else()
+add_custom_command(TARGET c_react_demo POST_BUILD
+	COMMAND echo "mkdir $<TARGET_FILE_DIR:c_react_demo>/ui"
+	COMMAND rd /s/q "$<TARGET_FILE_DIR:c_react_demo>/ui"	
+	COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}build $<TARGET_FILE_DIR:c_react_demo>/ui
+   )
+endif()

@@ -71,7 +71,7 @@ void substr(char *source, int start, int length, char *dest)
 	char *p;
 	k = strlen(source);
 	p = source;
-	for (i = start - 1; i<start - 1 + length; i++)//´ÓµÚn-1Î»ÖÃ¿ªÊ¼£¬½ØÈ¡m¸ö×Ö·û
+	for (i = start - 1; i<start - 1 + length; i++)//ï¿½Óµï¿½n-1Î»ï¿½Ã¿ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½È¡mï¿½ï¿½ï¿½Ö·ï¿½
 		dest[j++] = *(p + i);
 	dest[j] = '\0';
 	printf("the new string is:");
@@ -118,10 +118,10 @@ int main() {
 	memset(&webview, 0, sizeof(webview));
 	char* strDir = getCurrentPath();
 	char strPath[1024];
-	sprintf(strPath, "%s%s", strDir, "ui/index.html");
-
+	sprintf(strPath, "file://%s%s", strDir, "/ui/index.html");
+	printf("%s", strPath);
 	webview.title = "VLAN";
-	webview.url = "http://localhost:3000";// "http://conductor.vlan.cn";//"http://localhost:3000";//strPath;
+	webview.url = strPath;// "http://conductor.vlan.cn";//"http://localhost:3000";//strPath;
 	webview.width = 1020;
 	webview.height = 690;
 	webview.resizable = 0;

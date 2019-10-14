@@ -27,4 +27,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `其他说明`
 这里用了index.html的resultHandle方法接受后台调用，然后PostMessages.js监听事件，做消息中转。<br>
 
+### build c code
+1. cmake . 
+2. make 
+
 
